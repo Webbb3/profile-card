@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+body {
+  font: 18px "Nunito", sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("bg.png");
+  background-size: cover;
+  -webkit-animation: backgroundZoomAnimate 50s forwards;
+          animation: backgroundZoomAnimate 50s forwards;
+}
+
+@-webkit-keyframes backgroundZoomAnimate {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes backgroundZoomAnimate {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+.profile-card {
+  box-shadow: 0 18px 200px -60px black;
+  border-radius: 50px;
+  width: 650px;
+  position: relative;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.2509803922);
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .profile-card {
+    width: auto;
+  }
+}
+.profile-card_img img {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
+}
+.profile-card_desc {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.profile-card_desc h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.profile-card_desc h1 + div {
+  font-size: 20px;
+}
+.profile-card_info {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+@media screen and (max-width: 576px) {
+  .profile-card_info {
+    gap: 30px;
+  }
+}
+.profile-card_info > div {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.profile-card_info > div > *:first-child {
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.profile-card_info > div > *:last-child {
+  font-size: 16px;
+  opacity: 0.7;
+}
+.profile-card_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.profile-card_social a {
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+  margin: 15px;
+  border-radius: 40%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .profile-card_social a {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .profile-card_social a:hover {
+    transform: scale(1.2) translateY(-5px);
+  }
+}
+.profile-card_social a.linkedin {
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  box-shadow: 0 4px 30px rgba(43, 98, 169, 0.5);
+}
+.profile-card_social a.github {
+  background: linear-gradient(45deg, #b113d5, #9e24f0);
+  box-shadow: 0 4px 30px rgba(43, 98, 169, 0.5);
+}
+.profile-card_social a.behance {
+  background: linear-gradient(45deg, #333333, #626b73);
+  box-shadow: 0 4px 30px rgba(63, 65, 67, 0.6);
+}
+.profile-card_actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (max-width: 576px) {
+  .profile-card_actions {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.profile-card_actions > button {
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  padding: 15px 0;
+  min-width: 250px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .profile-card_actions > button {
+    min-width: 170px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile-card_actions > button {
+    min-width: inherit;
+    width: 100%;
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .profile-card_actions > button:hover {
+    transform: translateY(-5px);
+  }
+}
+.profile-card_actions > button.blue {
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  box-shadow: 0 4px 30px rgba(19, 127, 212, 0.4);
+}
+.profile-card_actions > button.blue.hover {
+  box-shadow: 0 7px 30px rgba(19, 127, 212, 0.75);
+}
+.profile-card_actions > button.purple {
+  background: linear-gradient(45deg, #b113d5, #9e24f0);
+  box-shadow: 0 7px 30px rgba(176, 45, 223, 0.75);
+}
+.profile-card_actions > button.purple.hover {
+  box-shadow: 0 7px 30px rgba(223, 45, 70, 0.75);
+}/*# sourceMappingURL=style.css.map */
