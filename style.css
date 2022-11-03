@@ -189,7 +189,7 @@ body::before {
 }
 .profile-card_actions > button.blue {
   background: linear-gradient(45deg, #1da1f2, #0e71c8);
-  box-shadow: 0 4px 30px rgba(19, 127, 212, 0.4);
+  box-shadow: 0 4px 30px rgba(30, 124, 196, 0.4);
 }
 .profile-card_actions > button.blue.hover {
   box-shadow: 0 7px 30px rgba(19, 127, 212, 0.75);
