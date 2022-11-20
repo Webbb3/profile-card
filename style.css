@@ -16,8 +16,8 @@ body::before {
   pointer-events: none;
   background: url("bg.png");
   background-size: cover;
-  -webkit-animation: backgroundZoomAnimate 50s forwards;
-          animation: backgroundZoomAnimate 50s forwards;
+  -webkit-animation: backgroundZoomAnimate 33s forwards;
+          animation: backgroundZoomAnimate 33s forwards;
 }
 
 @-webkit-keyframes backgroundZoomAnimate {
@@ -34,7 +34,7 @@ body::before {
     transform: scale(1);
   }
   to {
-    transform: scale(1.3);
+    transform: scale(1.33);
   }
 }
 .profile-card {
