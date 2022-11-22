@@ -1,4 +1,4 @@
-# My projects!
+# My first portfolio!
 
 The development of the profile card is made for the practical use of my **skills**, such as:
 
